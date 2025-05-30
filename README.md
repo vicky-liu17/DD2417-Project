@@ -1,5 +1,9 @@
 # Semantic equivalence detection
 
+## Method 1: Pre-trained Cross Encoder
+
+The file cross_encoder_final.ipynb contains all code need to load the pre-trained model, finetune it, and run it on the test set. \n The resulting model from our fine-tuning can be loaded in the notebook as, simply by running the relevant cell. \n Make sure to follow the steps to unzip the dataset below. If there are issues with loading data, you might have to adjust the "path" variable for the dataset. 
+
 ## Method 2: Logistic Regression with TF-IDF
 
 This method implements a simple and effective non-neural baseline for duplicate question detection using logistic regression and lexical similarity features.
