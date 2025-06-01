@@ -1,5 +1,11 @@
 # Semantic equivalence detection
 
+## Method 1: Pre-trained Cross Encoder
+
+The file cross_encoder_final.ipynb contains all code need to load the pre-trained model, finetune it, and run it on the test set.
+The resulting model from our fine-tuning can be loaded in the notebook as, simply by running the relevant cell.
+Make sure to follow the steps to unzip the dataset below. If there are issues with loading data, you might have to adjust the "path" variable for the dataset. 
+
 ## Method 2: Logistic Regression with TF-IDF
 
 This method implements a simple and effective non-neural baseline for duplicate question detection using logistic regression and lexical similarity features.
@@ -57,3 +63,16 @@ Confusion Matrix:
 This method provides a strong lexical baseline and helps measure the value added by more advanced semantic or neural approaches.
 
 The full implementation can be found in the notebook: `TF-IDF.ipynb`.
+
+## Logistic Regression with GloVe
+The code can be found in `GloVe.ipynb`. It assumes the glove6B embeddings are in `/data/glove.6B/glove.6B.50d.txt`. It will:
+1. load the GloVe embeddings
+2. load the cleaned dataset
+3. train the logistic regression classifier
+4. generate test set statistics
+5. run the classifier on user submitted questions.
+
+  Required packages:
+- pandas
+- sklearn
+- nltk
